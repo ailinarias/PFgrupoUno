@@ -34,6 +34,9 @@
             <li class="nav-item mx-lg-4">
               <a class="nav-link text-white text-center" href="/pages/peticion/peticion.html">Petición</a>
             </li>
+            <li class="nav-item mx-lg-4">
+              <a class="nav-link text-white text-center" href="/pages/reseña/reseña.html">Tu reseña</a>
+            </li>
             </ul>
   
             <ul class="navbar-nav container-lg nav-list me-auto mb-2 mb-lg-0 nav-lg">
@@ -49,6 +52,9 @@
               <li class="nav-item mx-lg-4 header-item">
                 <a class="nav-link text-dark text-center btn btn-light" href="/pages/peticion/peticion.html">Petición</a>
               </li>
+              <li class="nav-item mx-lg-4 header-item">
+                <a class="nav-link text-dark text-center btn btn-light" href="/pages/reseña/reseña.html">Tu reseña</a>
+              </li>
               </ul>
          
         </div>
@@ -58,39 +64,41 @@
   
    <div class="container contenido">
     <div class="row">
-      <div class="col-12 col-md-12 col-lg-6 ">
-        <h1 class="p-2 ms-3 title-contact">Contáctanos</h1>
-        
-        <section class="bg-info p-2 shadow bg-opacity-10 fw-bold  text-center ">
-        <p> Si deseas consultar mayor información sobre películas o tienes alguna duda al respecto de nuestros servicios de streaming, puedes recibir una consulta gratuita por nuestros medios de comunicación. <br><br>
+      <div class="p-2 bg-black bg-opacity-25 text-white border-color fw-bold  text-center m-1 font  ">
+        <h1 class="fw-bold">Contáctanos</h1>
+      <p> Si deseas consultar mayor información sobre películas o tienes alguna duda al respecto de nuestros servicios de streaming, <br> puedes recibir una consulta gratuita por nuestros medios de comunicación. <br><br>
 
-          Contáctanos vía WhatsApp +549 115698478
-          <br>
-              Av 9 Julio 380 - Buenos Aires - Capital</p>
-      </section>
-        <form class="row p-lg-2 p-md-2 p-sm-2 ">
+        Contáctanos vía WhatsApp +549 115698478
+        <br>
+            Av 9 Julio 380 - Buenos Aires - Capital</p>
+    </div>
+    
+      <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+        <form id="registrarDatos" action="/pages/sent/sent.html" name="registrarDatos" class="row p-lg-2 p-md-2 p-sm-2 bg-black bg-opacity-25 text-white m-2 p-1">
           <div class="mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control place-form" id="nombre" placeholder="Ingresa tu nombre">
+            <input type="text" class="form-control place-form" id="nombre" minlength="2" maxlength="25" placeholder="Ingresa tu nombre" required>
           </div>
           <div class="mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
             <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control place-form" id="apellido" placeholder="Ingresa tu apellido">
+            <input type="text" class="form-control place-form" id="apellido" minlength="2" maxlength="25" placeholder ="Ingresa tu apellido" required>
           </div>
           <div class="mb-3 col-12 col-lg-12">
             <label for="correo" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control place-form" id="correo" placeholder="Ingresa tu correo electrónico">
+            <input type="email" class="form-control place-form" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" minlength="4" maxlength="25" placeholder ="Ingresa tu correo electrónico" required>
           </div>
           <div class="mb-3 col-12 col-lg-12">
             <label for="exampleFormControlTextarea1" class="form-label">Comentario o duda</label>
-          <textarea class="form-control form-floating" id="exampleFormControlTextarea1" placeholder="Ingresa tu comentario o duda"></textarea>
+          <textarea class="form-control form-floating" id="exampleFormControlTextarea1" minlength="4" maxlength="150" placeholder="Ingresa tu comentario o duda" required></textarea>
           </div>
           
-          <button type="submit" class="btn btn-primary col-2 ms-3 place-form">Enviar</button>
+          <button type="submit"  class="btn btn-warning col-lg-2  place-form" >Enviar</button>
+          
         </form>
+        
       </div>
-      <div class="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center ">
-        <div>
+      <div class="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center">
+        
           <img src="/assets/images/img-2.jpg"  class="img-fluid img-contact" alt="">
           
         </div>
@@ -158,5 +166,7 @@
   </footer>
       <script src="/js/bootstrap.bundle.min.js"></script>
       <script src="/js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"></script>
 </body>
 </html>
