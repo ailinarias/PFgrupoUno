@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../assets/images/logo-ico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/logo-ico.ico" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -77,11 +79,11 @@
         <form id="registrarDatos" action="../../pages/sent/sent.html" name="registrarDatos" class="row p-lg-2 p-md-2 p-sm-2 bg-black bg-opacity-25 text-white m-2 p-1">
           <div class="mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control place-form" id="nombre" minlength="2" maxlength="25" placeholder="Ingresa tu nombre" required>
+            <input type="text" class="form-control place-form" id="nombre" pattern="^[^0-9]+$" minlength="2" maxlength="25" placeholder="Ingresa tu nombre" required>
           </div>
           <div class="mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
             <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control place-form" id="apellido" minlength="2" maxlength="25" placeholder ="Ingresa tu apellido" required>
+            <input type="text" class="form-control place-form" id="apellido" pattern="^[^0-9]+$" minlength="2" maxlength="25" placeholder ="Ingresa tu apellido" required>
           </div>
           <div class="mb-3 col-12 col-lg-12">
             <label for="correo" class="form-label">Correo electrónico</label>
